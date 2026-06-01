@@ -11,10 +11,10 @@ phases:
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
 
   build:
-  commands:
-    - docker build -t apache-prod-repo .
-    - docker tag apache-prod-repo:latest $REPOSITORY_URI:$IMAGE_TAG
-    - docker tag apache-prod-repo:latest $REPOSITORY_URI:latest
+    commands:
+      - docker build -t apache-prod-repo .
+      - docker tag apache-prod-repo:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag apache-prod-repo:latest $REPOSITORY_URI:latest
 
   post_build:
     commands:
