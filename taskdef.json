@@ -15,7 +15,7 @@
       "environment": [
         {
           "name": "ENVIRONMENT",
-          "value": "DEV"
+          "value": "PROD"
         }
       ]
     }
